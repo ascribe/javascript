@@ -357,22 +357,29 @@ Other Style Guides
     }
     ```
 
-  - [5.2](#5.2) <a name='5.2'></a> When destructuring requires multiple lines, inline the initial property.
+  - [5.2](#5.2) <a name='5.2'></a> When destructuring requires multiple lines, follow formatting rules for [objects](#3.1):
 
     ```javascript
     // bad
+    const { first: {
+                nested
+            },
+            second } = obj;
+
+    // bad
     const {
-        first,
+        first: {
+            nested
+        },
+        second } = obj;
+
+    // good
+    const {
+        first: {
+            nested
+        },
         second
     } = obj;
-
-    // good
-    let { first,
-          second } = obj;
-
-    // good
-    const { first,
-            second } = obj;
     ```
 
   - [5.3](#5.3) <a name='5.3'></a> Use array destructuring.
