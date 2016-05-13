@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-ascribe",
+  "version": "1.0.0",
+  "description": "Ascribe's ESLint config, following our styleguide (extending from Airbnb's)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ascribe/javascript"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "ascribe",
+    "airbnb",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Ascribe",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ascribe/javascript/issues"
+  },
+  "homepage": "https://github.com/ascribe/javascript",
+  "dependencies": {
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-config-airbnb-base": "^3.0.1"
+  }
+}
