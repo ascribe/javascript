@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ascribe/javascript",
   "dependencies": {
+    "babel-eslint": "^6.0.4",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-config-airbnb-base": "^3.0.1"
   }

@@ -8,4 +8,5 @@ module.exports = Object.assign(base, {
     ],
 
     rules: customES6,
+    parser: 'babel-eslint',
 });

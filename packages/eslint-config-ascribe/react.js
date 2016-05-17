@@ -7,5 +7,6 @@ module.exports = Object.assign(base, {
         'airbnb/rules/react-a11y',
     ],
 
+    parser: 'babel-eslint',
     rules: customReact,
 });
