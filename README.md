@@ -279,6 +279,33 @@ Other Style Guides
     };
     ```
 
+  - [3.8](#3.8) <a name='3.8'></a> Prefer quoting only properties that are invalid identifiers, but always ensure that all properties are consistently quoted.
+
+    > Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many javascript engines.
+
+    ```javascript
+    // bad
+    const bad = {
+        foo: 3,
+        bar: 4,
+        'data-blah': 5
+    };
+
+    // good
+    const good = {
+        'foo': 3,
+        'bar': 4,
+        'data-blah': 5
+    };
+
+    // better
+    const better = {
+        foo: 3,
+        bar: 4,
+        dataBlah: 5
+    };
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Arrays
@@ -419,6 +446,17 @@ Other Style Guides
     const { left, right } = processInput(input);
     ```
 
+  - [5.5](#5.5) <a name='5.5'></a> You can use destructuring and an object spread operator to filter out specific properties while keeping the other properties in a new object.
+
+    ```javascript
+    // bad
+    const val = obj.value;
+    delete obj.value;
+
+    // good
+    const { value: val, ...otherObj } = obj;
+    // otherObj will hold all other properties of obj except for value
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1069,6 +1107,38 @@ Other Style Guides
     }
     ```
 
+  - [13.5](#13.5) <a name='13.5'></a> Avoid declaring unused variables, however the cases where it can be convenient (such as filtering some properties out of an object or destructuring an array, for example), prefix the variable name with `ignored`:
+
+    ```javascript
+    // bad
+    const {
+        first, // ignored
+        second, // ignored
+        third
+    } = winners;
+
+    // good
+    const {
+        first: ignoredFirst, // ignored
+        second: ignoredSecond, // ignored
+        third
+    } = winners;
+    ```
+
+    Note that our ESLint configuration is set up to error on any unused variable unless it is prefixed by `ignored`. An exception to this is argument names; any arguments listed before the first one used is OK:
+
+    ```javascript
+    // bad -- `second` is unused
+    function (first, second) {
+        return first;
+    }
+
+    // good -- `first` is listed before the used `second` argument
+    function (first, second) {
+        return second;
+    }
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Hoisting
@@ -1226,6 +1296,129 @@ Other Style Guides
 
   - [15.4](#15.4) <a name='15.4'></a> For more information see [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) by Angus Croll.
 
+  - [15.5](#15.5) <a name='15.5'></a> Use braces to create blocks in `case` and `default` clauses that contain lexical declarations (e.g. `let`, `const`, `function`, and `class`).
+
+  > Why? Lexical declarations are visible in the entire `switch` block but only get initialized when assigned, which only happens when its `case` is reached. This causes problems when multiple `case` clauses attempt to define the same thing.
+
+    ```javascript
+    // bad
+    switch (foo) {
+        case 1:
+            let x = 1;
+            break;
+        case 2:
+            const y = 2;
+            break;
+        case 3:
+            function f() {}
+            break;
+        default:
+            class C {}
+    }
+
+    // good
+    switch (foo) {
+        case 1: {
+            let x = 1;
+            break;
+        }
+        case 2: {
+            const y = 2;
+            break;
+        }
+        case 3: {
+            function f() {}
+            break;
+        }
+        case 4:
+            bar();
+            break;
+        default: {
+            class C {}
+        }
+    }
+    ```
+
+  - [15.6](#15.6) <a name='15.6'></a> Indent one full level for case statements.
+
+    ```javascript
+    // bad
+    switch (foo) {
+    case 1:
+        break;
+    default:
+        break;
+    }
+
+    // bad
+    switch (foo) {
+      case 1:
+        break;
+      default:
+        break;
+    }
+
+    // good
+    switch (foo) {
+        case 1:
+            break;
+        default:
+            break;
+    }
+    ```
+
+  - [15.7](#15.7) <a name='15.7'></a> Ternaries should not be nested and generally be single line expressions.
+
+    ```javascript
+    // bad
+    const foo = maybe1 > maybe2
+        ? "bar"
+        : value1 > value2 ? "baz" : null;
+
+    // better
+    const maybeNull = value1 > value2 ? 'baz' : null;
+
+    const foo = maybe1 > maybe2
+        ? 'bar'
+        : maybeNull;
+
+    // best
+    const maybeNull = value1 > value2 ? 'baz' : null;
+
+    const foo = maybe1 > maybe2 ? 'bar' : maybeNull;
+    ```
+
+  - [15.8](#15.8) <a name='15.8'></a> Avoid unneeded ternary statements.
+
+    ```javascript
+    // bad
+    const foo = a ? a : b;
+    const bar = c ? true : false;
+    const baz = c ? false : true;
+
+    // good
+    const foo = a || b;
+    const bar = !!c;
+    const baz = !c;
+    ```
+
+  - [15.9](#15.9) <a name='15.9'></a> Use any of the following styles for multi-line ternary statements:
+
+    ```javascript
+    // good
+    const foo = thisisasuperlongexpression ? value
+                                           : otherValue;
+
+    // good
+    const foo = thisisasuperlongexpression
+        ? value : otherValue;
+
+    // good
+    const foo = thisisasuperlongexpression
+        ? value
+        : otherValue;
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 
@@ -1345,9 +1538,11 @@ Other Style Guides
     }
     ```
 
-  - [17.3](#17.3) <a name='17.3'></a> Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
+  - [17.3](#17.3) <a name='17.3'></a> Always put a single space between where your comment starts (ie. `/*`, `/**`, or `//`) and the comment.
 
-  - [17.4](#17.4) <a name='17.4'></a> Use `// FIXME:` to annotate problems.
+  - [17.4](#17.4) <a name='17.4'></a> Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
+
+  - [17.5](#17.5) <a name='17.5'></a> Use `// FIXME:` to annotate problems.
 
     ```javascript
     class Calculator extends Abacus {
@@ -1360,7 +1555,7 @@ Other Style Guides
     }
     ```
 
-  - [17.5](#17.5) <a name='17.5'></a> Use `// TODO:` to annotate solutions to problems.
+  - [17.6](#17.6) <a name='17.6'></a> Use `// TODO:` to annotate solutions to problems.
 
     ```javascript
     class Calculator extends Abacus {
@@ -1605,6 +1800,112 @@ Other Style Guides
         ...
     }
     ```
+
+  - [18.9](#18.9) <a name='18.9'></a> Do not pad your blocks with blank lines.
+
+    ```javascript
+    // bad
+    function bar() {
+
+        console.log(foo);
+
+    }
+
+    // also bad
+    if (baz) {
+
+        console.log(qux);
+    } else {
+        console.log(foo);
+
+    }
+
+    // good
+    function bar() {
+        console.log(foo);
+    }
+
+    // good
+    if (baz) {
+        console.log(qux);
+    } else {
+        console.log(foo);
+    }
+    ```
+
+  - [18.10](#18.10) <a name='18.10'></a> Do not add spaces inside parentheses.
+
+    ```javascript
+    // bad
+    function bar( foo ) {
+        return foo;
+    }
+
+    // good
+    function bar(foo) {
+        return foo;
+    }
+
+    // bad
+    if ( foo ) {
+        console.log(foo);
+    }
+
+    // good
+    if (foo) {
+        console.log(foo);
+    }
+    ```
+
+  - [18.11](#18.11) <a name='18.11'></a> Do not add spaces inside brackets.
+
+    ```javascript
+    // bad
+    const foo = [ 1, 2, 3 ];
+    console.log(foo[ 0 ]);
+
+    // good
+    const foo = [1, 2, 3];
+    console.log(foo[0]);
+    ```
+
+  - [18.12](#18.12) <a name='18.12'></a> Add spaces inside curly braces.
+
+    ```javascript
+    // bad
+    const foo = {clark: 'kent'};
+
+    // good
+    const foo = { clark: 'kent' };
+    ```
+
+  - [18.13](#18.13) <a name='18.13'></a> Avoid having lines of code that are longer than 100 characters (including whitespace).
+
+    > Why? This ensures readability and maintainability.
+
+    ```javascript
+    // bad
+    const foo = 'Whatever national crop flips the window. The cartoon reverts within the screw. Whatever wizard constrains a helpful ally. The counterpart ascends!';
+
+    // bad
+    $.ajax({ method: 'POST', url: 'https://airbnb.com/', data: { name: 'John' } }).done(() => console.log('Congratulations!')).fail(() => console.log('You have failed this city.'));
+
+    // good
+    const foo = 'Whatever national crop flips the window. The cartoon reverts within the screw. ' +
+                'Whatever wizard constrains a helpful ally. The counterpart ascends!';
+
+    // good
+    $.ajax({
+        method: 'POST',
+        url: 'https://airbnb.com/',
+        data: { name: 'John' },
+    })
+        .done(() => console.log('Congratulations!'))
+        .fail(() => console.log('You have failed this city.'));
+    ```
+
+    In some cases, you can go slightly over the limit (urls, code that's *just* slightly over), but
+    our ESLint configuration is set up to warn on code lines that are over 105 characters.
 
 
 **[⬆ back to top](#table-of-contents)**
