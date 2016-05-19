@@ -1,5 +1,5 @@
 base = require('./base.js');
-customReact = require('./rules/custom_react.js');
+customRulesReact = require('./rules/custom_react.js');
 
 module.exports = Object.assign(base, {
     extends: [
@@ -8,5 +8,5 @@ module.exports = Object.assign(base, {
     ],
 
     parser: 'babel-eslint',
-    rules: customReact,
+    rules: customRulesReact,
 });
