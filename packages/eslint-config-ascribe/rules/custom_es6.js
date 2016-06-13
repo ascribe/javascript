@@ -61,7 +61,7 @@ module.exports = {
     // http://eslint.org/docs/rules/max-len
     'max-len': [2, {
         'code': 105, // Use 105 to give some leeway for *just* slightly longer lines when convienient
-        'ignorePattern': '^import .* from .*$',
+        'ignorePattern': '^(import|export) .* from .*$',
         'ignoreComments': false,
         'ignoreTrailingComments': true,
         'ignoreUrls': true
