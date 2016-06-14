@@ -1909,6 +1909,22 @@ Other Style Guides
     our ESLint configuration is set up to warn on code lines that are over 105 characters.
 
 
+  - [18.14](#18.14) <a name='18.14'></a> When a function call needs to be broken up into multiple lines, put arguments on a separate line, indented four spaces:
+
+    ```javascript
+    // bad
+    const foo = funcCall(this, is, a, really,
+                         reallllyyyyyyy, long,
+                         function, call);
+
+    // good
+    const foo = funcCall(
+        this, is, a, really,
+        reallllyyyyyyy, long,
+        function,c all
+    );
+
+
 **[⬆ back to top](#table-of-contents)**
 
 
