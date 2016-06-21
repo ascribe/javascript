@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ascribe-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ascribe's React ESLint config, following our styleguide (extending from Airbnb's)",
   "main": "index.js",
   "repository": {
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/ascribe/javascript",
   "dependencies": {
     "babel-eslint": "^6.0.5",
-    "eslint-config-airbnb": "^9.0.1"
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-config-ascribe": "^2.0.0"
   }
 }
