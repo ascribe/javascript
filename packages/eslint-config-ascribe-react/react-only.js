@@ -1,4 +1,4 @@
-base = require('./base.js');
+base = require('eslint-config-ascribe/base.js');
 customRulesReact = require('./rules/custom_react.js');
 
 module.exports = Object.assign(base, {
