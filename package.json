@@ -30,5 +30,10 @@
   "bugs": {
     "url": "https://github.com/ascribe/javascript/issues"
   },
-  "homepage": "https://github.com/ascribe/javascript"
+  "homepage": "https://github.com/ascribe/javascript",
+  "dependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-config-airbnb-base": "^4.0.0"
+  }
 }
