@@ -34,6 +34,6 @@
   "dependencies": {
     "babel-eslint": "^6.1.2",
     "eslint-config-airbnb": "^9.0.1",
-    "eslint-config-airbnb-base": "^4.0.2"
+    "eslint-config-airbnb-base": "^5.0.0"
   }
 }
