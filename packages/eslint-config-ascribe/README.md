@@ -11,14 +11,24 @@ we extend that and override it when our rules differ.
 Usage
 =====
 
-A single configuration is exported, for ES6:
+Two configurations are exported:
 
 ### eslint-config-ascribe
 
-Like airbnb's, it requires `eslint` and `eslint-plugin-import`, but also `babel-eslint` for some
-ES6+ features that ESLint doesn't natively know about yet.
+Full ES6 configuration. Like airbnb's, it requires `eslint` and `eslint-plugin-import`, but also
+`babel-eslint` for some ES6+ features that ESLint doesn't natively know about yet.
 
 To use:
 
 1. `npm install --save-dev eslint-config-ascribe babel-eslint eslint-plugin-import eslint`
 2. Add `"extends": "ascribe"` to your ESLint configuration
+
+### eslint-config-ascribe/es5
+
+Same as the full configuration, except with all ES6 features turned off and uses ESLint's default
+parser.
+
+To use:
+
+1. `npm install --save-dev eslint-config-ascribe babel-eslint eslint-plugin-import eslint`
+2. Add `"extends": "ascribe/es5"` to your ESLint configuration

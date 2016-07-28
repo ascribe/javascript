@@ -1,14 +1,14 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'node': true,
-        'es6': true,
+    env: {
+        browser: true,
+        node: true,
+        es6: true,
     },
-    'parserOptions': {
-        'ecmaVersion': 7,
-        'sourceType': 'module',
+    parserOptions: {
+        ecmaVersion: 7,
+        sourceType: 'module',
     },
-    'globals': {
+    globals: {
         // Disable overwriting for commonly used polyfills
         'fetch': false,
         'Promise': false,
