@@ -1,6 +1,6 @@
 base = require('./base.js');
 
-customRulesES6 = require('./rules/custom_es6.js');
+customRules = require('./rules/custom.js');
 customRulesImport = require('./rules/custom_import.js');
 
 customSettingsImport = require('./settings/custom_import.js');
@@ -10,6 +10,6 @@ module.exports = Object.assign(base, {
     parser: 'babel-eslint',
 
     // Airbnb-base already requires import plugin
-    rules: Object.assign({}, customRulesES6, customRulesImport),
+    rules: Object.assign({}, customRules, customRulesImport),
     settings: Object.assign({}, customSettingsImport),
 });
