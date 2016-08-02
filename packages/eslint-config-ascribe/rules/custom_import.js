@@ -33,6 +33,10 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
     'import/no-extraneous-dependencies': [2, { 'devDependencies': false, 'optionalDependencies': false }],
 
+    // Enforce imports to not specify a trailing .js extension
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    'import/extensions': [2, { 'js': 'never' }],
+
     // Enforce module import order: builtin -> external -> internal
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     'import/order': [2, {
