@@ -14,6 +14,10 @@ module.exports = {
     // http://eslint.org/docs/rules/no-console
     'no-console': [1, { 'allow': ['error'] }],
 
+    // Allow use of Object.prototypes builtins directly
+    // http://eslint.org/docs/rules/no-prototype-builtins
+    'no-prototype-builtins': [2],
+
 
     /**
      * Best Practices
