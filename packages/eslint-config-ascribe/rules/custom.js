@@ -72,6 +72,10 @@ module.exports = {
     // http://eslint.org/docs/rules/new-cap
     'new-cap': [2, { 'newIsCap': true, 'capIsNew': false }],
 
+    // Allow the continue statement
+    // http://eslint.org/docs/rules/no-continue
+    'no-continue': [0],
+
     // Allow dangling underscores in identifiers only after this
     // http://eslint.org/docs/rules/no-underscore-dangle
     'no-underscore-dangle': [2, { allowAfterThis: true }],
@@ -104,4 +108,13 @@ module.exports = {
         }
     }],
 
+
+    /**
+     * ES6-specific Issues
+     * (http://eslint.org/docs/rules/#ecmascript-6)
+     */
+
+    // Ignore built-in import sorting for eslint-plugin-import's version
+    // http://eslint.org/docs/rules/sort-imports
+    'sort-imports': [0],
 };
