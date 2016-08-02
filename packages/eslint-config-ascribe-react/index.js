@@ -1,4 +1,5 @@
 customRulesReact = require('./rules/custom_react.js');
+customSettingsReact = require('./settings/custom_react.js');
 
 module.exports = {
     extends: [
@@ -6,4 +7,5 @@ module.exports = {
         'ascribe',
     ],
     rules: Object.assign({}, customRulesReact),
+    settings: Object.assign({}, customSettingsReact),
 };

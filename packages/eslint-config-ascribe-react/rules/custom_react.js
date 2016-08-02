@@ -10,10 +10,6 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
     'react/no-danger': 2,
 
-    // Prevent usage of deprecated methods
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
-    'react/no-deprecated': [1, { 'react': '15.0' }],
-
     // Prevent direct mutation of this.state
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
     'react/no-direct-mutation-state': 2,
@@ -29,6 +25,10 @@ module.exports = {
     // Warn on components that could be made stateless
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
     'react/prefer-stateless-function': 2,
+
+    // Reset deprecated require-extension rule
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md/
+    'react/require-extension': 0,
 
     // Enforce component methods order
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
