@@ -76,6 +76,19 @@ module.exports = {
     // http://eslint.org/docs/rules/no-continue
     'no-continue': [0],
 
+    // Disallow un-paren'd mixes of different operators if they're not of the same precendence
+    // http://eslint.org/docs/rules/no-mixed-operators
+    'no-mixed-operators': [2, {
+      groups: [
+        ['+', '-', '*', '/', '%', '**'],
+        ['&', '|', '^', '~', '<<', '>>', '>>>'],
+        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+        ['&&', '||'],
+        ['in', 'instanceof']
+      ],
+      allowSamePrecedence: true
+    }],
+
     // Allow dangling underscores in identifiers only after this
     // http://eslint.org/docs/rules/no-underscore-dangle
     'no-underscore-dangle': [2, { allowAfterThis: true }],
