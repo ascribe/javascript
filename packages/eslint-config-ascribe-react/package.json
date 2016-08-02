@@ -26,7 +26,7 @@
   "homepage": "https://github.com/ascribe/javascript",
   "dependencies": {
     "eslint-config-airbnb": "^10.0.0",
-    "eslint-config-ascribe": "^2.5.0"
+    "eslint-config-ascribe": "^2.8.1"
   },
   "peerDependencies": {
     "babel-eslint": "^6.1.0"
