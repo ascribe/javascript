@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ascribe",
-  "version": "2.8.1",
+  "version": "2.9.0",
   "description": "Ascribe's ESLint config, following our styleguide (extending from Airbnb's)",
   "main": "index.js",
   "repository": {
