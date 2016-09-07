@@ -93,6 +93,10 @@ module.exports = {
       allowSamePrecedence: true
     }],
 
+    // Allow use of unary increment/decrement operators
+    // http://eslint.org/docs/rules/no-plusplus
+    'no-plusplus': [0],
+
     // Allow dangling underscores in identifiers only after this
     // http://eslint.org/docs/rules/no-underscore-dangle
     'no-underscore-dangle': [2, { allowAfterThis: true }],
