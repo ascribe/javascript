@@ -6,6 +6,10 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
      */
 
+    // Warn on certain propTypes (any, array, object)
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
+    'react/forbid-prop-types': [1, { forbid: ['any', 'array', 'object'] }],
+
     // Prevent usage of dangerous JSX properties
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
     'react/no-danger': 2,
