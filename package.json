@@ -33,6 +33,6 @@
   "homepage": "https://github.com/ascribe/javascript",
   "dependencies": {
     "eslint-config-airbnb": "^11.0.0",
-    "eslint-config-airbnb-base": "^7.0.1"
+    "eslint-config-airbnb-base": "^7.1.0"
   }
 }
