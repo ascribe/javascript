@@ -134,6 +134,9 @@ module.exports = {
      * ES6-specific Issues
      * (http://eslint.org/docs/rules/#ecmascript-6)
      */
+    // Don't require parens in arrow function arguments
+    // http://eslint.org/docs/rules/arrow-parens
+    'arrow-parens': [0],
 
     // Ignore built-in import sorting for eslint-plugin-import's version
     // http://eslint.org/docs/rules/sort-imports
