@@ -4,7 +4,6 @@ customRules = require('./rules/custom.js');
 noEs6Rules = require('./rules/no-es6.js');
 
 // Remove ES6-specifics from base config
-base.env.es6 = false;
 base.parserOptions.ecmaVersion = 5;
 delete base.globals.fetch;
 delete base.globals.Promise;
