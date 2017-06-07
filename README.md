@@ -1,8 +1,15 @@
 # ~~Airbnb~~ ascribe JavaScript Style Guide() {
 
 ## Introduction
-At ascribe we write a lot of JavaScript and value quality code.
-Since all of us liked [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript), we figured that we can just fork it and change it to our needs.
+
+At ascribe we write a lot of JavaScript and value quality code. Since all of us liked [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript), we figured that we can just fork it and change it to our needs.
+
+## Usage
+
+Use the provided ESlint packages under `packages/` and refer to their documentation for detailed usage:
+
+- [eslint-config-ascribe](packages/eslint-config-ascribe)
+- [eslint-config-ascribe-react](packages/eslint-config-ascribe-react)
 
 
 Other Style Guides
