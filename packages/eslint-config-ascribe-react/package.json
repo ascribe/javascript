@@ -3,6 +3,11 @@
   "version": "2.0.1",
   "description": "Ascribe's React ESLint config, following our styleguide (extending from Airbnb's)",
   "main": "index.js",
+  "scripts": {
+    "release": "./node_modules/release-it/bin/release.js --src.tagName='v%s' --github.release --npm.publish --non-interactive",
+    "release-minor": "./node_modules/release-it/bin/release.js minor --src.tagName='v%s' --github.release --npm.publish --non-interactive",
+    "release-major": "./node_modules/release-it/bin/release.js major --src.tagName='v%s' --github.release --npm.publish --non-interactive"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ascribe/javascript"
@@ -25,10 +30,13 @@
   },
   "homepage": "https://github.com/ascribe/javascript",
   "dependencies": {
-    "eslint-config-airbnb": "^14.0.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-config-ascribe": "^3.0.0"
   },
   "peerDependencies": {
     "babel-eslint": "^7.1.1"
+  },
+  "devDependencies": {
+    "release-it": "^2.7.3"
   }
 }
