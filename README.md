@@ -95,7 +95,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [2.1](#2.1) <a name='2.1'></a> Use `const` for all of your references; avoid using `var`.
 
-  > Why? This ensures that you can't reassign your references (mutation), which can lead to bugs and difficult to comprehend code.
+    > Why? This ensures that you can't reassign your references (mutation), which can lead to bugs and difficult to comprehend code.
 
     ```javascript
     // bad
@@ -109,7 +109,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [2.2](#2.2) <a name='2.2'></a> If you must mutate references, use `let` instead of `var`.
 
-  > Why? `let` is block-scoped rather than function-scoped like `var`.
+    > Why? `let` is block-scoped rather than function-scoped like `var`.
 
     ```javascript
     // bad
@@ -189,7 +189,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
   <a name="es6-computed-properties"></a>
   - [3.4](#3.4) <a name='3.4'></a> Use computed property names when creating objects with dynamic property names.
 
-  > Why? They allow you to define all the properties of an object in one place.
+    > Why? They allow you to define all the properties of an object in one place.
 
     ```javascript
 
@@ -238,7 +238,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
   <a name="es6-object-concise"></a>
   - [3.6](#3.6) <a name='3.6'></a> Use property value shorthand.
 
-  > Why? It is shorter to write and descriptive.
+    > Why? It is shorter to write and descriptive.
 
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
@@ -256,7 +256,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [3.7](#3.7) <a name='3.7'></a> Group your shorthand properties at the beginning of your object declaration.
 
-  > Why? It's easier to tell which properties are using the shorthand.
+    > Why? It's easier to tell which properties are using the shorthand.
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
@@ -365,7 +365,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [5.1](#5.1) <a name='5.1'></a> Use object destructuring when accessing and using multiple properties of an object.
 
-  > Why? Destructuring saves you from creating temporary references for those properties.
+    > Why? Destructuring saves you from creating temporary references for those properties.
 
     ```javascript
     // bad
@@ -428,7 +428,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [5.4](#5.4) <a name='5.4'></a> Use object destructuring for multiple return values, not array destructuring.
 
-  > Why? You can add new properties over time or change the order of things without breaking call sites.
+    > Why? You can add new properties over time or change the order of things without breaking call sites.
 
     ```javascript
     // bad
@@ -515,7 +515,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
   <a name="es6-template-literals"></a>
   - [6.5](#6.5) <a name='6.5'></a> When programmatically building up strings, use template strings instead of concatenation.
 
-  > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
+    > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
 
     ```javascript
     // bad
@@ -542,7 +542,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [7.1](#7.1) <a name='7.1'></a> Use function declarations instead of function expressions.
 
-  > Why? Function declarations are named, so they're easier to identify in call stacks. Also, the whole body of a function declaration is hoisted, whereas only the reference of a function expression is hoisted. This rule makes it possible to always use [Arrow Functions](#arrow-functions) in place of function expressions.
+    > Why? Function declarations are named, so they're easier to identify in call stacks. Also, the whole body of a function declaration is hoisted, whereas only the reference of a function expression is hoisted. This rule makes it possible to always use [Arrow Functions](#arrow-functions) in place of function expressions.
 
     ```javascript
     // bad
@@ -600,7 +600,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
   <a name="es6-rest"></a>
   - [7.6](#7.6) <a name='7.6'></a> **NEVER** use `arguments`, opt to use rest syntax `...` instead.
 
-  > Why? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
+    > Why? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
 
     ```javascript
     // bad
@@ -644,19 +644,19 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [7.8](#7.8) <a name='7.8'></a> Avoid side effects with default parameters.
 
-  > Why? They are confusing to reason about.
+    > Why? They are confusing to reason about.
 
-  ```javascript
-  var b = 1;
-  // bad
-  function count(a = b++) {
-    console.log(a);
-  }
-  count();  // 1
-  count();  // 2
-  count(3); // 3
-  count();  // 3
-  ```
+    ```javascript
+    var b = 1;
+    // bad
+    function count(a = b++) {
+      console.log(a);
+    }
+    count();  // 1
+    count();  // 2
+    count(3); // 3
+    count();  // 3
+    ```
 
   - [7.9](#7.9) <a name='7.9'></a> Always put default parameters last.
 
@@ -672,17 +672,17 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
     }
     ```
 
-- [7.10](#7.10) <a name='7.10'></a> **NEVER** use the Function constructor to create a new function.
+  - [7.10](#7.10) <a name='7.10'></a> **NEVER** use the Function constructor to create a new function.
 
-  > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
+    > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
 
-  ```javascript
-  // bad
-  var add = new Function('a', 'b', 'return a + b');
+    ```javascript
+    // bad
+    var add = new Function('a', 'b', 'return a + b');
 
-  // still bad
-  var subtract = Function('a', 'b', 'return a - b');
-  ```
+    // still bad
+    var subtract = Function('a', 'b', 'return a - b');
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -690,9 +690,9 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [8.1](#8.1) <a name='8.1'></a> When you must use function expressions (as when passing an anonymous function), use arrow function notation.
 
-  > Why? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
+    > Why? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
 
-  > Why not? If you have a fairly complicated function, you might move that logic out into its own function declaration.
+    > Why not? If you have a fairly complicated function, you might move that logic out into its own function declaration.
 
     ```javascript
     // bad
@@ -710,9 +710,9 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [8.2](#8.2) <a name='8.2'></a> If the function body consists of a single expression, feel free to omit the braces and use the implicit return. Otherwise use a `return` statement.
 
-  > Why? Syntactic sugar. It reads well when multiple functions are chained together.
+    > Why? Syntactic sugar. It reads well when multiple functions are chained together.
 
-  > Why not? If you plan on returning an object.
+    > Why not? If you plan on returning an object.
 
     ```javascript
     // good
@@ -733,7 +733,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [8.3](#8.3) <a name='8.3'></a> In case the expression spans over multiple lines, wrap it in parentheses for better readability.
 
-  > Why? It shows clearly where the function starts and ends.
+    > Why? It shows clearly where the function starts and ends.
 
     ```javascript
     // bad
@@ -752,7 +752,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [8.4](#8.4) <a name='8.4'></a> If your function only takes a single argument, feel free to omit the parentheses.
 
-  > Why? Less visual clutter.
+    > Why? Less visual clutter.
 
     ```javascript
     // good
@@ -768,7 +768,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [9.1](#9.1) <a name='9.1'></a> Always use `class`. Avoid manipulating `prototype` directly.
 
-  > Why? `class` syntax is more concise and easier to reason about.
+    > Why? `class` syntax is more concise and easier to reason about.
 
     ```javascript
     // bad
@@ -797,7 +797,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [9.2](#9.2) <a name='9.2'></a> Use `extends` for inheritance.
 
-  > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
+    > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
 
     ```javascript
     // bad
@@ -880,7 +880,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [10.1](#10.1) <a name='10.1'></a> Always use modules (`import`/`export`) over a non-standard module system. You can always transpile to your preferred module system.
 
-  > Why? Modules are the future, let's start using the future now.
+    > Why? Modules are the future, let's start using the future now.
 
     ```javascript
     // bad
@@ -898,7 +898,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [10.2](#10.2) <a name='10.2'></a> Do not use wildcard imports.
 
-  > Why? This makes sure you have a single default export.
+    > Why? This makes sure you have a single default export.
 
     ```javascript
     // bad
@@ -910,7 +910,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [10.3](#10.3) <a name='10.3'></a>And do not export directly from an import.
 
-  > Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
+    > Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
 
     ```javascript
     // bad
@@ -929,7 +929,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [11.1](#11.1) <a name='11.1'></a> Prefer [JavaScript's higher-order functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) like `map()` and `reduce()` instead of loops like `for-of` unless there is a substantial performance disadvantage by doing so.
 
-  > Why? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side-effects.
+    > Why? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side-effects.
 
     ```javascript
     const numbers = [1, 2, 3, 4, 5];
@@ -956,7 +956,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [11.3](#11.3) <a name='11.3'></a> Don't use generators for now.
 
-  > Why? They don't transpile well to ES5.
+    > Why? They don't transpile well to ES5.
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1032,7 +1032,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [13.3](#13.3) <a name='13.3'></a> Group all your `const`s and then group all your `let`s.
 
-  > Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
+    > Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
 
     ```javascript
     // bad
@@ -1057,7 +1057,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [13.4](#13.4) <a name='13.4'></a> Assign variables where you need them, but place them in a reasonable place.
 
-  > Why? `let` and `const` are block scoped and not function scoped.
+    > Why? `let` and `const` are block scoped and not function scoped.
 
     ```javascript
     // good
@@ -1102,7 +1102,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
     }
     ```
 
-  > Note that referencing a variable declared by `let` or `const` before they are set results in a reference error, including typeof (see [Why `typeof` is no longer "safe"](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15))
+    > Note that referencing a variable declared by `let` or `const` before they are set results in a reference error, including typeof (see [Why `typeof` is no longer "safe"](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15))
 
     ```javascript
     if (condition) {
@@ -1302,7 +1302,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [15.5](#15.5) <a name='15.5'></a> Use braces to create blocks in `case` and `default` clauses that contain lexical declarations (e.g. `let`, `const`, `function`, and `class`).
 
-  > Why? Lexical declarations are visible in the entire `switch` block but only get initialized when assigned, which only happens when its `case` is reached. This causes problems when multiple `case` clauses attempt to define the same thing.
+    > Why? Lexical declarations are visible in the entire `switch` block but only get initialized when assigned, which only happens when its `case` is reached. This causes problems when multiple `case` clauses attempt to define the same thing.
 
     ```javascript
     // bad
@@ -1453,8 +1453,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
     }
     ```
 
-  - [16.2](#16.2) <a name='16.2'></a> If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your
-    `if` block's closing brace.
+  - [16.2](#16.2) <a name='16.2'></a> If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your `if` block's closing brace.
 
     ```javascript
     // bad
@@ -1970,7 +1969,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [19.2](#19.2) <a name='19.2'></a> Additional trailing comma: **Yup.**
 
-  > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
+    > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
 
     ```javascript
     // bad - git diff without trailing comma
@@ -2210,6 +2209,7 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
     ```
 
   - [22.6](#22.6) <a name='22.6'></a> If your file exports a single class, your filename should be exactly the name of the class, converted from PascalCase to snake_case.
+
     ```javascript
     // file contents
     class CheckBox {
@@ -2414,19 +2414,19 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
   - [27.1](#27.1) <a name='27.1'></a> This is a collection of links to the various es6 features.
 
-1. [Arrow Functions](#arrow-functions)
-1. [Classes](#constructors)
-1. [Object Shorthand](#es6-object-shorthand)
-1. [Object Concise](#es6-object-concise)
-1. [Object Computed Properties](#es6-computed-properties)
-1. [Template Strings](#es6-template-literals)
-1. [Destructuring](#destructuring)
-1. [Default Parameters](#es6-default-parameters)
-1. [Rest](#es6-rest)
-1. [Array Spreads](#es6-array-spreads)
-1. [Let and Const](#references)
-1. [Iterators and Generators](#iterators-and-generators)
-1. [Modules](#modules)
+    1. [Arrow Functions](#arrow-functions)
+    1. [Classes](#constructors)
+    1. [Object Shorthand](#es6-object-shorthand)
+    1. [Object Concise](#es6-object-concise)
+    1. [Object Computed Properties](#es6-computed-properties)
+    1. [Template Strings](#es6-template-literals)
+    1. [Destructuring](#destructuring)
+    1. [Default Parameters](#es6-default-parameters)
+    1. [Rest](#es6-rest)
+    1. [Array Spreads](#es6-array-spreads)
+    1. [Let and Const](#references)
+    1. [Iterators and Generators](#iterators-and-generators)
+    1. [Modules](#modules)
 
   - [27.2](#27.2) <a name='27.2'></a> Khan Academy has a nice section in their [Javascript styleguide](https://github.com/Khan/style-guides/blob/master/style/javascript.md) that discusses various ways to [accomplish tasks in ES6 rather than using underscore/lodash](https://github.com/Khan/style-guides/blob/master/style/javascript.md#dont-use-underscore).
 
