@@ -1,11 +1,9 @@
 eslint-config-ascribe
 ---------------------
 
-Provides a ES6 [ESLint](http://eslint.org/) configuration against [Ascribe's JavaScript style
-guide](../../README.md), which is based off of [Airbnb's](https://github.com/airbnb/javascript).
+Provides a ES6 [ESLint](http://eslint.org/) configuration against [Ascribe's JavaScript style guide](../../README.md), which is based off of [Airbnb's](https://github.com/airbnb/javascript).
 
-As Airbnb graciously provides a default ES6 ESLint configuration (see [here](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)),
-we extend that and override it when our rules differ.
+As Airbnb graciously provides a default ES6 ESLint configuration (see [here](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)), we extend that and override it when our rules differ.
 
 
 Usage
