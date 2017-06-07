@@ -2,6 +2,10 @@
 
 > 💅 For consistent JavaScript across BigchainDB, IPDB & ascribe's repos.
 
+[![Build Status](https://travis-ci.org/ascribe/javascript.svg?branch=master)](https://travis-ci.org/ascribe/javascript)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ascribe/javascript.svg)](https://greenkeeper.io/)
+[![js bigchaindb](https://img.shields.io/badge/js-bigchaindb-39BA91.svg)](https://github.com/ascribe/javascript)
+
 ## Introduction
 
 At ascribe we write a lot of JavaScript and value quality code. Since all of us liked [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript), we figured that we can just fork it and change it to our needs.
@@ -13,8 +17,8 @@ At ascribe we write a lot of JavaScript and value quality code. Since all of us 
 
 Use the provided ESlint packages under `packages/` and refer to their documentation for detailed usage:
 
-- [eslint-config-ascribe](packages/eslint-config-ascribe)
-- [eslint-config-ascribe-react](packages/eslint-config-ascribe-react)
+- [![npm](https://img.shields.io/npm/v/eslint-config-ascribe.svg)](https://www.npmjs.com/package/eslint-config-ascribe) [eslint-config-ascribe](packages/eslint-config-ascribe)
+- [![npm](https://img.shields.io/npm/v/eslint-config-ascribe-react.svg)](https://www.npmjs.com/package/eslint-config-ascribe-react) [eslint-config-ascribe-react](packages/eslint-config-ascribe-react)
 
 ## Table of Contents
 
