@@ -1,8 +1,13 @@
 # ~~Airbnb~~ ascribe JavaScript Style Guide() {
 
+> 💅 For consistent JavaScript across BigchainDB, IPDB & ascribe's repos.
+
 ## Introduction
 
 At ascribe we write a lot of JavaScript and value quality code. Since all of us liked [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript), we figured that we can just fork it and change it to our needs.
+
+- [JavaScript Style Guide (this document)](#table-of-contents)
+- [React Style Guide](react/)
 
 ## Usage
 
@@ -10,10 +15,6 @@ Use the provided ESlint packages under `packages/` and refer to their documentat
 
 - [eslint-config-ascribe](packages/eslint-config-ascribe)
 - [eslint-config-ascribe-react](packages/eslint-config-ascribe-react)
-
-
-Other Style Guides
- - [React](react/)
 
 ## Table of Contents
 
