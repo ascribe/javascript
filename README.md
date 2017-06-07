@@ -6,7 +6,6 @@ Since all of us liked [Airbnb's JavaScript Style Guide](https://github.com/airbn
 
 
 Other Style Guides
- - [ES5](es5/)
  - [React](react/)
 
 ## Table of Contents
