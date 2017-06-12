@@ -131,7 +131,7 @@ module.exports = {
     
     // We don't like semicolons so kill them
     // http://eslint.org/docs/rules/semi
-    'semi': ['never'],
+    'semi': [2, 'never'],
 
 
     /**
