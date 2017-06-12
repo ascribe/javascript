@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/ascribe/javascript.svg?branch=master)](https://travis-ci.org/ascribe/javascript)
 [![Greenkeeper badge](https://badges.greenkeeper.io/ascribe/javascript.svg)](https://greenkeeper.io/)
-[![js bigchaindb](https://img.shields.io/badge/js-bigchaindb-39BA91.svg)](https://github.com/ascribe/javascript)
+[![js ascribe](https://img.shields.io/badge/js-ascribe-39BA91.svg)](https://github.com/ascribe/javascript)
 
 ## Introduction
 
