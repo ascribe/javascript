@@ -1,12 +1,10 @@
 {
   "name": "eslint-config-ascribe",
   "version": "3.0.1",
-  "description": "Ascribe's ESLint config, following our styleguide (extending from Airbnb's)",
+  "description": "Ascribe's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
-    "release": "./node_modules/release-it/bin/release.js --src.tagName='v%s' --github.release --npm.publish --non-interactive",
-    "release-minor": "./node_modules/release-it/bin/release.js minor --src.tagName='v%s' --github.release --npm.publish --non-interactive",
-    "release-major": "./node_modules/release-it/bin/release.js major --src.tagName='v%s' --github.release --npm.publish --non-interactive"
+    
   },
   "repository": {
     "type": "git",
@@ -32,8 +30,5 @@
   },
   "peerDependencies": {
     "babel-eslint": "^7.1.1"
-  },
-  "devDependencies": {
-    "release-it": "^2.7.3"
   }
 }
