@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ascribe",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Ascribe's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
