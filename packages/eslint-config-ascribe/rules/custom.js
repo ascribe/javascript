@@ -97,9 +97,9 @@ module.exports = {
     // http://eslint.org/docs/rules/no-plusplus
     'no-plusplus': [0],
 
-    // Allow dangling underscores in identifiers only after this
+    // Always allow dangling underscores
     // http://eslint.org/docs/rules/no-underscore-dangle
-    'no-underscore-dangle': [2, { allowAfterThis: true }],
+    'no-underscore-dangle': [0],
 
     // Require unix-style line breaks
     // http://eslint.org/docs/rules/linebreak-style
