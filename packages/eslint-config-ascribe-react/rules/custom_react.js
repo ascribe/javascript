@@ -119,17 +119,13 @@ module.exports = {
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-unsupported-elements.md
     'jsx-a11y/aria-unsupported-elements': 2,
 
-    // Disallow href "#"
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/href-no-hash.md
-    'jsx-a11y/href-no-hash': 2,
-
     // Require that labels use "htmlFor"
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
     'jsx-a11y/label-has-for': 2,
 
     // Enforce that elements with onClick handlers must be focusable.
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/onclick-has-focus.md
-    'jsx-a11y/onclick-has-focus': 2,
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/interactive-supports-focus.md
+    'jsx-a11y/interactive-supports-focus': 2,
 
     // Enforce that elements with ARIA roles must have all required attributes for that role.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/role-has-required-aria-props.md

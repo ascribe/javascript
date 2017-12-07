@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ascribe-react",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Ascribe's React ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {},
