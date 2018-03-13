@@ -1,4 +1,4 @@
-# BigchainDB Style Guide
+# BigchainDB JavaScript Style Guide
 
 For consistent JavaScript across BigchainDB-related repos.
 
