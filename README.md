@@ -1,6 +1,6 @@
-# ~~Airbnb~~ ascribe JavaScript Style Guide() {
+# BigchainDB Style Guide
 
-> 💅 For consistent JavaScript across BigchainDB, IPDB & ascribe's repos.
+For consistent JavaScript across BigchainDB-related repos.
 
 [![Build Status](https://travis-ci.org/ascribe/javascript.svg?branch=master)](https://travis-ci.org/ascribe/javascript)
 [![Greenkeeper badge](https://badges.greenkeeper.io/ascribe/javascript.svg)](https://greenkeeper.io/)
@@ -2642,5 +2642,3 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Amendments
 
 We encourage you to fork this guide and change the rules to fit your team's style guide. Below, you may list some amendments to the style guide. This allows you to periodically update your style guide without having to deal with merge conflicts.
-
-# }
